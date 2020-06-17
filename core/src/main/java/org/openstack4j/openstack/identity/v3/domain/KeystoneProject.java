@@ -26,7 +26,7 @@ import com.google.common.collect.Maps;
  */
 @JsonRootName("project")
 /** If we don't explicitly set extra as an ignore property, it will methods with @JsonAnyGetter/Setter will not work **/
-@JsonIgnoreProperties(value = "extra" , ignoreUnknown = true)
+@JsonIgnoreProperties(value = {"extra", "options"} , ignoreUnknown = true)
 public class KeystoneProject implements Project {
 
     private static final long serialVersionUID = 1L;
@@ -169,7 +169,7 @@ public class KeystoneProject implements Project {
     public void setExtra(String key, String value) {
         // is_domain is not necessary
         // if we don't ignore this, this will be set into extra field.
-        if (Objects.equal(key, "is_domain")) {
+        if (Objects.equal(key, "is_domain") || Objects.equal(key, "options")) {
             return;
         }
         extra.put(key, value);
@@ -346,7 +346,7 @@ public class KeystoneProject implements Project {
             model.extra.put(key, value);
             return this;
         }
-        
+
         /**
          * @see KeystoneProject#setTags(List<String>)
          */

@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.pacesys</groupId>
 		<artifactId>openstack4j-core-integration-test</artifactId>
-		<version>3.2.0</version>
+		<version>3.2.0-PATCH</version>
 	</parent>
 	<artifactId>it-httpclient</artifactId>
 	<name>OpenStack4j IntegrationTest Apache HttpClient</name>
@@ -22,7 +22,7 @@
 		<dependency>
 			<groupId>org.pacesys</groupId>
 			<artifactId>openstack4j-core-integration-test</artifactId>
-			<version>${project.version}</version>
+			<version>${openstack4j-core-integration-test.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>

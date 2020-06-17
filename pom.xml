@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.pacesys</groupId>
     <artifactId>openstack4j-parent</artifactId>
-    <version>3.2.0</version>
+    <version>3.2.0-PATCH</version>
     <name>OpenStack4j Parent</name>
     <description>OpenStack Java API</description>
     <url>http://github.com/ContainX/openstack4j/</url>
@@ -20,6 +20,7 @@
         <jackson.version>2.7.3</jackson.version>
         <maven.jar.plugin.version>2.6</maven.jar.plugin.version>
         <additionalparam>-Xdoclint:none</additionalparam>
+        <openstack4j-core-integration-test.version>3.2.0</openstack4j-core-integration-test.version>
     </properties>
     <licenses>
         <license>
